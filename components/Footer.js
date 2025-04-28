@@ -4,7 +4,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-black text-gray-300 py-10 mt-20">
+    <footer className="bg-gradient-to-r from-gray-900 to-black text-gray-300  py-10 mt-20">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
         
         {/* بخش درباره ما */}
@@ -41,10 +41,10 @@ export default function Footer() {
       {/* خط جداکننده */}
       <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
         ساخته شده توسط{' '}
-        <a href="https://mintgem.vercel.app/" target="_blank" className="text-primary hover:underline">
+        <a href="https://aradrezaei.github.io" target="_blank" className="text-primary hover:underline">
           آراد رضایی
         </a>{' '}
-        | © 2025
+        | © 2025 تمامی حقوق این وبسایت متعلق به مینت جم میباشد.
       </div>
     </footer>
   );

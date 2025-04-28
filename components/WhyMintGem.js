@@ -2,7 +2,7 @@
 
 export default function WhyMintGem() {
   return (
-    <div className="py-20 bg-gray-100">
+    <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         <div>
           <h2 className="text-4xl font-bold text-gray-800 mb-6">چرا MintGem؟</h2>

@@ -11,11 +11,11 @@ export default function GamesList() {
   ];
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {games.map((game, index) => (
-            <div key={index} className="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition transform hover:scale-105">
+            <div key={index} className=" rounded-xl shadow-md overflow-hidden hover:shadow-lg transition transform hover:scale-105">
               <img src={game.image} alt={game.name} className="w-full h-40 object-cover" />
               <div className="p-4 text-center">
                 <h3 className="font-bold text-gray-800">{game.name}</h3>

@@ -6,7 +6,7 @@ import { FaRocket, FaShieldAlt, FaTags, FaHeadset } from 'react-icons/fa';
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+    <section className="py-20  text-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-center mb-12">چرا مینت جم؟</h2>
         <div className="grid md:grid-cols-4 gap-8">

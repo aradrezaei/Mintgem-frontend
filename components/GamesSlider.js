@@ -15,7 +15,7 @@ export default function GamesSlider() {
   ];
 
   return (
-    <div className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">
+    <div className="py-16 ">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">پول این بازی‌ها را با بهترین قیمت تهیه کنید</h2>
         <Swiper
