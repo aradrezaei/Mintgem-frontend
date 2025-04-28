@@ -1,28 +1,33 @@
-'use client';
-
-import { ShieldCheck, Clock, Headphones, ThumbsUp } from 'lucide-react';
+import { FaRocket, FaShieldAlt, FaTags, FaHeadset } from 'react-icons/fa';
 
 export default function FeaturesSection() {
-  const features = [
-    { icon: ShieldCheck, title: "امنیت بالا", description: "اطلاعات شما با قوی‌ترین روش‌ها محافظت می‌شود." },
-    { icon: Clock, title: "تحویل سریع", description: "سفارشات در کوتاه‌ترین زمان ممکن پردازش می‌شوند." },
-    { icon: Headphones, title: "پشتیبانی ۲۴/۷", description: "تیم پشتیبانی همیشه در کنار شماست." },
-    { icon: ThumbsUp, title: "رضایت کاربران", description: "بیش از هزاران کاربر راضی به ما اعتماد کرده‌اند." },
-  ];
-
   return (
-    <div className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-        {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="bg-white text-primary p-4 rounded-full mb-4 shadow-lg">
-              <feature.icon size={32} />
-            </div>
-            <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-            <p className="text-sm opacity-80">{feature.description}</p>
+    <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-center mb-12">چرا مینت جم؟</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <FaRocket className="text-5xl mb-4 mx-auto" />
+            <h3 className="text-2xl font-bold mb-2">سرعت بالا</h3>
+            <p>خرید سریع و بدون معطلی.</p>
           </div>
-        ))}
+          <div className="text-center">
+            <FaShieldAlt className="text-5xl mb-4 mx-auto" />
+            <h3 className="text-2xl font-bold mb-2">امنیت فوق‌العاده</h3>
+            <p>محافظت از اطلاعات و پرداخت‌ها.</p>
+          </div>
+          <div className="text-center">
+            <FaTags className="text-5xl mb-4 mx-auto" />
+            <h3 className="text-2xl font-bold mb-2">تخفیف‌های ویژه</h3>
+            <p>تخفیف برای کاربران وفادار.</p>
+          </div>
+          <div className="text-center">
+            <FaHeadset className="text-5xl mb-4 mx-auto" />
+            <h3 className="text-2xl font-bold mb-2">پشتیبانی حرفه‌ای</h3>
+            <p>همیشه در کنار شما.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
