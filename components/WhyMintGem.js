@@ -13,7 +13,7 @@ export default function WhyMintGem() {
           </p>
         </div>
         <div>
-          <img src="/images/whymintgem.jpg" alt="چرا MintGem" className="rounded-xl shadow-lg object-cover" />
+          <img src="https://www.radcarsauto.com/cars.webp" alt="چرا MintGem" className="rounded-xl shadow-lg object-cover" />
         </div>
       </div>
     </div>
