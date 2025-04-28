@@ -1,3 +1,5 @@
+'use client'; // اضافه کن اولین خط
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSlider from '../components/HeroSlider';

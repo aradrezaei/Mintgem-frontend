@@ -15,6 +15,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all ${isScrolled ? 'bg-darkbg backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
