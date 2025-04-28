@@ -7,11 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6D28D9',
-        secondary: '#9333EA',
-        accent: '#F472B6',
-        darkbg: 'rgba(0,0,0,0.7)',
+        primary: '#6D28D9',   // بنفش سلطنتی
+        secondary: '#9333EA', // بنفش پررنگ‌تر
+        accent: '#F472B6',    // صورتی شیک
+        darkbg: 'rgba(0,0,0,0.7)', // بک گراند دارک مود
       },
+      
       
       fontFamily: {
         sans: ['Shabnam', 'sans-serif'],
