@@ -6,17 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        shabnam: ['Shabnam', 'sans-serif'],
+      },
       colors: {
         primary: '#6D28D9',   // بنفش سلطنتی
         secondary: '#9333EA', // بنفش پررنگ‌تر
         accent: '#F472B6',    // صورتی شیک
         darkbg: 'rgba(0,0,0,0.7)', // بک گراند دارک مود
-      },
-      
-      
-      fontFamily: {
-        sans: ['Shabnam', 'sans-serif'],
-      },
+      }
     },
   },
   plugins: [],
