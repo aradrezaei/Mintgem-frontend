@@ -1,3 +1,7 @@
+'use client';
+
+
+
 import { FaRocket, FaShieldAlt, FaTags, FaHeadset } from 'react-icons/fa';
 
 export default function FeaturesSection() {
