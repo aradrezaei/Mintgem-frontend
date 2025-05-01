@@ -4,7 +4,7 @@ import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-black text-gray-300  py-10 mt-20">
+    <footer className="bg-gradient-to-r from-gray-300 to-white text-gray-800 dark:text-gray-300  dark:bg-gradient-to-r dark:from-gray-900 dark:to-black py-10 mt-20">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
         
         {/* بخش درباره ما */}
