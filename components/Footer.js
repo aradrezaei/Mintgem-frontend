@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-gray-300 to-white text-gray-800 dark:text-gray-300  dark:bg-gradient-to-r dark:from-gray-900 dark:to-black py-10 mt-20">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
-        
+
         {/* بخش درباره ما */}
         <div className="flex flex-col items-start">
           <h2 className="text-2xl font-bold text-primary mb-4">مینت جم</h2>
@@ -24,6 +24,7 @@ export default function Footer() {
           <a href="/blog" className="hover:text-accent transition">وبلاگ</a>
           <a href="/about" className="hover:text-accent transition">درباره ما</a>
           <a href="/contact-us" className="hover:text-accent transition">ارتباط با ما</a>
+          <a href="/terms-of-service" className="hover:text-accent transition">قوانین و مقررات</a>
         </div>
 
         {/* بخش شبکه‌های اجتماعی */}
