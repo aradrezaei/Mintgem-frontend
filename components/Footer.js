@@ -23,7 +23,7 @@ export default function Footer() {
           <a href="/services" className="hover:text-accent transition">خدمات</a>
           <a href="/blog" className="hover:text-accent transition">وبلاگ</a>
           <a href="/about" className="hover:text-accent transition">درباره ما</a>
-          <a href="/contact" className="hover:text-accent transition">ارتباط با ما</a>
+          <a href="/contact-us" className="hover:text-accent transition">ارتباط با ما</a>
         </div>
 
         {/* بخش شبکه‌های اجتماعی */}

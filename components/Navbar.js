@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ShoppingCart, Sun, Moon, Menu, User, Search } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,16 +31,17 @@ export default function Navbar() {
         {/* Logo and Name */}
         <div className="flex items-center gap-4">
           <img src="/logo.png" alt="Logo" className="w-10 h-10" />
-          <span className="text-2xl font-extrabold text-primary">Gem Mint</span>
+          <span className="text-2xl font-extrabold text-primary">مینت جم</span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center gap-8">
-          {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((link, idx) => (
-            <a key={idx} href="#" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">
-              {link}
-            </a>
-          ))}
+          <Link href="/"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خانه</span></Link>
+          <Link href="/services"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خدمات</span></Link>
+          <Link href="/blog"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">وبلاگ</span></Link>
+          <Link href="/about"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">درباره ما</span></Link>
+          <Link href="/contact-us"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">ارتباط با ما</span></Link>
+          <Link href="/purchaseprocess"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">فرایند خرید</span></Link>
         </nav>
 
         {/* Actions */}
@@ -81,14 +83,15 @@ export default function Navbar() {
         <div className="lg:hidden bg-white dark:bg-darkbg shadow-md backdrop-blur-md flex flex-col items-center py-6 gap-6 animate-slideDown">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold text-primary">Gem Mint</span>
+            <span className="text-xl font-bold text-primary">مینت جم</span>
           </div>
           <div className="flex flex-col gap-4 text-center">
-            {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((link, idx) => (
-              <a key={idx} href="#" className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">
-                {link}
-              </a>
-            ))}
+            <Link href="/"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خانه</span></Link>
+            <Link href="/services"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خدمات</span></Link>
+            <Link href="/blog"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">وبلاگ</span></Link>
+            <Link href="/about"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">درباره ما</span></Link>
+            <Link href="/contact-us"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">ارتباط با ما</span></Link>
+            <Link href="/purchaseprocess"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">فرایند خرید</span></Link>
           </div>
           <div className="flex items-center gap-4 mt-4">
             <Search size={24} className="text-gray-700 dark:text-gray-300" />
