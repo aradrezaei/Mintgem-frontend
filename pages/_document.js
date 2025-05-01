@@ -10,7 +10,7 @@ export default function Document() {
           type="text/css"
         />
       </Head>
-      <body className="font-shabnam bg-white dark:bg-darkbg transition-colors">
+      <body className="font-shabnam bg-white dark:bg-gray-900 transition-colors">
         <Main />
         <NextScript />
       </body>
