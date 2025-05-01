@@ -18,35 +18,20 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <HeroSlider />
+                  <GamesSlider />
         
-        <section className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
-          <GamesSlider />
-        </section>
-        
-        <section className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
           <AvailableGamesSection />
           <GamesList />
-        </section>
         
-        <section className="py-20 bg-primary text-white dark:bg-secondary transition-colors duration-300">
           <WhyMintGem />
-        </section>
         
-        <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white dark:from-secondary dark:to-primary transition-all duration-500">
           <FeaturesSection />
-        </section>
         
-        <section className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
           <AmazingOffers />
-        </section>
         
-        <section className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
           <ArticlesSlider />
-        </section>
         
-        <section className="py-20 bg-gradient-to-r from-secondary to-primary text-white dark:from-primary dark:to-secondary transition-all duration-500">
           <SocialMediaSection />
-        </section>
       </main>
       <Footer />
     </div>
