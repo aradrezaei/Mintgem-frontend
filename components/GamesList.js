@@ -2,7 +2,7 @@
 
 export default function GamesList() {
   const games = [
-    { name: "Free Fire", image: "https://www.cdnlogo.com/logos/f/51/freefire-1.svg" },
+    { name: "Free Fire", image: "" },
     { name: "Call of Duty Mobile", image: "/https://www.citypng.com/public/uploads/preview/hd-call-of-duty-mobile-codm-game-official-logo-png-7017516947877289uky0ombog.png" },
     { name: "PUBG Mobile", image: "" },
     { name: "Mobile Legends", image: "/images/mlbb.jpg" },
