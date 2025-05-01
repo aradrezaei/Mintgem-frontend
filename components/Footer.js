@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       {/* خط جداکننده */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      <div className="mt-10 border-t border-gray-300 dark:border-gray-700 pt-6 text-center text-sm text-gray-900 dark:text-gray-400">
         ساخته شده توسط{' '}
         <a href="https://aradrezaei.github.io" target="_blank" className="text-primary hover:underline">
           آراد رضایی
