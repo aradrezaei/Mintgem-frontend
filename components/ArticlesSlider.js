@@ -13,11 +13,13 @@ export default function ArticlesSlider() {
   ];
 
   return (
-    <div className="py-20 ">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-white mb-10 text-center">جدیدترین مقالات دنیای گیمینگ</h2>
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mb-10 text-center">
+          جدیدترین مقالات دنیای گیمینگ
+        </h2>
         <Swiper
-          spaceBetween={20}
+          spaceBetween={24}
           slidesPerView={1}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           breakpoints={{
@@ -30,16 +32,25 @@ export default function ArticlesSlider() {
         >
           {articles.map((article, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-105">
-                <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-white">{article.title}</h3>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    مقاله‌ای تخصصی برای گیمرهای حرفه‌ای
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 }
