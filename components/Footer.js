@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* بخش درباره ما */}
         <div className="flex flex-col items-start">
-          <h2 className="text-2xl font-bold text-primary mb-4">MintGem</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">مینت جم</h2>
           <p className="text-sm leading-7">
             مینت جم با هدف ارائه بهترین تجربه خرید پول بازی، با بالاترین سرعت و امنیت طراحی شده است.  
             به ما بپیوندید و حرفه‌ای بازی کنید!
