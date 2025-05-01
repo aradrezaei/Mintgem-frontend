@@ -6,42 +6,42 @@ import 'swiper/css';
 
 export default function GamesSlider() {
   const games = [
-    { name: "Free Fire", image: "/images/freefire.jpg" },
-    { name: "Call of Duty Mobile", image: "/images/codm.jpg" },
-    { name: "PUBG Mobile", image: "/images/pubgm.jpg" },
-    { name: "Mobile Legends", image: "/images/mlbb.jpg" },
-    { name: "Fortnite", image: "/images/fortnite.jpg" },
-    { name: "Clash of Clans", image: "/images/clash.jpg" }
+    { name: "Free Fire", image: "/images/freefire-logo.png" },
+    { name: "Call of Duty Mobile", image: "/images/codm-logo.png" },
+    { name: "Mobile Legends", image: "/images/mlbb-logo.png" },
+    { name: "Clash of Clans", image: "/images/clash-logo.png" },
+    { name: "Zepto", image: "/images/zepto-logo.png" },
+    { name: "Roblox", image: "/images/roblox-logo.png" },
   ];
 
   return (
-    <div className="py-16 ">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">پول این بازی‌ها را با بهترین قیمت تهیه کنید</h2>
+    <section className="py-12 bg-white dark:bg-gray-900">
+      <div className="max-w-6xl mx-auto px-4">
         <Swiper
           spaceBetween={20}
           slidesPerView={2}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
+            1024: { slidesPerView: 6 },
           }}
           modules={[Autoplay]}
           className="w-full"
         >
           {games.map((game, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
-                <img src={game.image} alt={game.name} className="w-full h-48 object-cover" />
-                <div className="p-4">
-                  <h3 className="text-center font-bold text-gray-800">{game.name}</h3>
-                </div>
+              <div className="p-4 flex justify-center items-center bg-transparent">
+                <img
+                  src={game.image}
+                  alt={game.name}
+                  className="h-20 object-contain transition hover:scale-110 duration-300 drop-shadow-md dark:drop-shadow-lg"
+                />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 }
