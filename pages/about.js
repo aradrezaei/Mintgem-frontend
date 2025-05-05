@@ -10,12 +10,7 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1618005198919-d3d4b1aeb8b0" 
-          alt="Gaming" 
-          className="absolute w-full h-full object-cover brightness-[0.4]"
-        />
+      <section className="h-[600px] ">
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-gray-800 dark:text-white text-center">
           <h1 className="text-6xl font-black mb-4 tracking-tight drop-shadow-lg">درباره مینت جم</h1>
           <p className="text-2xl font-medium opacity-90">سریع‌ترین، امن‌ترین و پیشرفته‌ترین پلتفرم خرید پول بازی در ایران</p>
@@ -32,7 +27,7 @@ export default function About() {
         </div>
         <div>
           <img 
-            src="https://images.unsplash.com/photo-1600267165477-5a36d057b1a7" 
+            src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-8f60-61f7-9600-98793c9d6b20/raw?se=2025-05-05T09%3A28%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=0b6db320-a8e0-55bd-a92f-afa026701e22&skoid=cbbaa726-4a2e-4147-932c-56e6e553f073&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-04T18%3A35%3A06Z&ske=2025-05-05T18%3A35%3A06Z&sks=b&skv=2024-08-04&sig=k6t0xW/Rk%2BPZJTmcbl8fnPbjZz/Df1kF98pZ/hCRMng%3D" 
             alt="Mission" 
             className="rounded-3xl shadow-2xl object-cover"
           />

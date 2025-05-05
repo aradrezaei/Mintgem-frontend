@@ -16,7 +16,7 @@ export default function WhyMintGem() {
         <div className="w-full">
           <div className="overflow-hidden rounded-xl shadow-2xl border dark:border-gray-700">
             <img
-              src="https://www.radcarsauto.com/cars.webp"
+              src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-3f70-61f7-90e7-c90b80142ec4/raw?se=2025-05-05T09%3A07%3A59Z&sp=r&sv=2024-08-04&sr=b&scid=26f8454c-0877-5bb7-be3d-c9783b14d48d&skoid=cbbaa726-4a2e-4147-932c-56e6e553f073&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-04T22%3A55%3A34Z&ske=2025-05-05T22%3A55%3A34Z&sks=b&skv=2024-08-04&sig=HaafJybdK8upTVF%2BhULEP2r0nfkvOdd8WnjH52m7qhc%3D"
               alt="چرا MintGem"
               className="w-full h-80 object-cover hover:scale-105 transition duration-500 ease-in-out"
             />
