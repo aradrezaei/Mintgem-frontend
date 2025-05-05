@@ -10,12 +10,15 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="h-[600px] ">
-        <div className="relative z-10 flex flex-col justify-center items-center h-full text-gray-800 dark:text-white text-center">
-          <h1 className="text-6xl font-black mb-4 tracking-tight drop-shadow-lg">درباره مینت جم</h1>
-          <p className="text-2xl font-medium opacity-90">سریع‌ترین، امن‌ترین و پیشرفته‌ترین پلتفرم خرید پول بازی در ایران</p>
-        </div>
-      </section>
+      <section className="mt-12 sm:mt-12">
+  <div className="max-w-4xl mx-auto text-center px-4">
+    <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-white mb-4 tracking-tight">درباره مینت جم</h1>
+    <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+      سریع‌ترین، امن‌ترین و پیشرفته‌ترین پلتفرم خرید پول بازی در ایران
+    </p>
+  </div>
+</section>
+
 
       {/* Mission Section */}
       <section className="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">

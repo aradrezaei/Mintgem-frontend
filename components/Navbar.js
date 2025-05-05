@@ -29,9 +29,9 @@ export default function Navbar() {
     <header className={`fixed w-full top-0 z-50 transition-all ${isScrolled ? 'bg-white dark:bg-darkbg shadow-md backdrop-blur-md' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* Logo and Name */}
-        <div className="flex items-center gap-4">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
-          <span className="text-2xl font-extrabold text-primary">مینت جم</span>
+        <div className="flex items-center ">
+          <img src="logo.png" alt="Logo" className="w-14 h-14" />
+          <span className="text-2xl font-extrabold text-gray-300">مینت جم</span>
         </div>
 
         {/* Desktop Menu */}
@@ -82,7 +82,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="lg:hidden bg-white dark:bg-darkbg shadow-md backdrop-blur-md flex flex-col items-center py-6 gap-6 animate-slideDown">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Logo" className="w-8 h-8" />
+            <img src="logo.png" alt="لوگو مینت جم" className="w-14 h-14" />
             <span className="text-xl font-bold text-primary">مینت جم</span>
           </div>
           <div className="flex flex-col gap-4 text-center">
