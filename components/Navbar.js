@@ -31,7 +31,7 @@ export default function Navbar() {
         {/* Logo and Name */}
         <div className="flex items-center ">
           <img src="logo.png" alt="Logo" className="w-14 h-14" />
-          <span className="text-2xl font-extrabold text-gray-300">مینت جم</span>
+          <span className="text-2xl font-extrabold text-gray-800 dark:text-gray-300">مینت جم</span>
         </div>
 
         {/* Desktop Menu */}
