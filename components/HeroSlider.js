@@ -13,14 +13,14 @@ export default function HeroSlider() {
       image: "/slider-1.png",
     },
     {
-      title: "فری فایر، کالاف، پابجی",
+      title: "بازی های محبوب",
       subtitle: "همه در یکجا، با بهترین قیمت",
-      image: "https://your-second-image-url",
+      image: "/slider-2.png",
     },
     {
       title: "چنل تلگرامی مینت جم",
       subtitle: "اخبار روزانه، آفرهای ویژه",
-      image: "https://your-third-image-url",
+      image: "/tel-banner.png",
     },
   ];
 

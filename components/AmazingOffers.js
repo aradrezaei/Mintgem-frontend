@@ -18,11 +18,15 @@ export default function AmazingOffers() {
         </div>
         <h2 className="text-4xl font-extrabold mb-4">آفرهای شگفت‌انگیز</h2>
         <p className="text-lg opacity-80 mb-8">
-          بهترین تخفیف‌ها و پیشنهادات ویژه را در MintGem تجربه کنید. فرصت را از دست ندهید!
+          بهترین تخفیف‌ها و پیشنهادات ویژه را در 
+          <span className='font-simbold '>
+             مینت جم
+          </span>
+            تجربه کنید. فرصت را از دست ندهید!
         </p>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[, Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
@@ -30,7 +34,7 @@ export default function AmazingOffers() {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
           }}
-          navigation
+          
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000 }}
           loop={true}
