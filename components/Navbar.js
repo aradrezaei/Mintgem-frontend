@@ -62,7 +62,11 @@ export default function Navbar() {
 
           {/* Login/Register Button */}
           <button className="hidden lg:flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-full font-semibold hover:bg-pink-500 transition">
-            <User size={18} /> ورود / ثبت‌نام
+
+          <link href='/login'>
+          <User size={18} /> ورود / ثبت‌نام
+          </link>
+
           </button>
 
           {/* Shopping Cart */}
