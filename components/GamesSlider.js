@@ -1,8 +1,8 @@
 'use client';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules'; // ✅ اینم درسته برای v10+
+import SwiperCore, { Autoplay } from 'swiper';
 
+SwiperCore.use([Autoplay]);
 
 export default function GamesSlider() {
   const games = [

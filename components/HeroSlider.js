@@ -1,8 +1,11 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules'; // ✅ اینم درسته برای v10+
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
+SwiperCore.use([Autoplay, Pagination]);
 
 export default function HeroSlider() {
   const slides = [
