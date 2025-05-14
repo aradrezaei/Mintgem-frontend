@@ -1,15 +1,10 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, } from 'swiper';
-import 'swiper/css';
-
-
-SwiperCore.use([Autoplay]);
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function ArticlesSlider() {
   const articles = [
