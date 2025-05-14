@@ -1,6 +1,11 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
+
+// ONLY FOR VERSION 8
+SwiperCore.use([Autoplay, Pagination, Navigation]);
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
