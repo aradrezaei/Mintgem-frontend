@@ -1,16 +1,18 @@
-'use client'; // اضافه کن اولین خط
+'use client';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import HeroSlider from '../components/HeroSlider';
-import GamesSlider from '../components/GamesSlider';
-import AvailableGamesSection from '../components/AvailableGamesSection';
-import GamesList from '../components/GamesList';
 import WhyMintGem from '../components/WhyMintGem';
 import FeaturesSection from '../components/FeaturesSection';
 import AmazingOffers from '../components/AmazingOffers';
-import ArticlesSlider from '../components/ArticlesSlider';
 import SocialMediaSection from '../components/SocialMediaSection';
+
+import dynamic from 'next/dynamic';
+
+// 👇 اینا Swiper دارن، پس باید به صورت داینامیک و فقط در کلاینت لود بشن
+const HeroSlider = dynamic(() => import('../components/HeroSlider'), { ssr: false });
+const GamesSlider = dynamic(() => import('../components/GamesSlider'), { ssr: false });
+const ArticlesSlider = dynamic(() => import('../components/ArticlesSlider'), { ssr: false });
 
 export default function Home() {
   return (
@@ -18,20 +20,12 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <HeroSlider />
-                  <GamesSlider />
-        
-          <AvailableGamesSection />
-          <GamesList />
-        
-          <WhyMintGem />
-        
-          <FeaturesSection />
-        
-          <AmazingOffers />
-        
-          <ArticlesSlider />
-        
-          <SocialMediaSection />
+        <GamesSlider />
+        <WhyMintGem />
+        <FeaturesSection />
+        <AmazingOffers />
+        <ArticlesSlider />
+        <SocialMediaSection />
       </main>
       <Footer />
     </div>

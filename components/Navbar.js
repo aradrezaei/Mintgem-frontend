@@ -9,6 +9,12 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Detect system theme preference
+  useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDark);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -66,7 +72,6 @@ export default function Navbar() {
               <User size={18} /> ورود / ثبت‌نام
             </button>
           </Link>
-
 
           {/* Shopping Cart */}
           <button className="relative p-2 bg-primary text-white rounded-full hover:bg-secondary transition">

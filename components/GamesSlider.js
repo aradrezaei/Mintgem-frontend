@@ -8,10 +8,10 @@ export default function GamesSlider() {
   const games = [
     { name: "Free Fire", image: "/freefire-logo.png" },
     { name: "Call of Duty Mobile", image: "https://www.citypng.com/public/uploads/preview/hd-call-of-duty-mobile-codm-game-official-logo-png-7017516947877289uky0ombog.png" },
-    { name: "Mobile Legends", image: "https://upload.wikimedia.org/wikipedia/en/9/91/Mobile_Legends_Bang_Bang_logo.png" },
-    { name: "Clash of Clans", image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Clash_of_Clans_logo.png" },
-    { name: "Zepto", image: "https://seeklogo.com/images/Z/zepto-logo-E4A76E26A5-seeklogo.com.png" },
-    { name: "Roblox", image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_Studio_Icon_2022.png" }
+    { name: "Mobile Legends", image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Mobile-legends-logo.svg/2560px-Mobile-legends-logo.svg.png" },
+    { name: "Clash of Clans", image: "https://1000logos.net/wp-content/uploads/2021/02/Clash-of-Clans-logo.png" },
+    { name: "Zepto", image: "https://cdn.freelogovectors.net/wp-content/uploads/2023/01/zepeto-logo-freelogovectors.net_.png" },
+    { name: "Roblox", image: "https://toppng.com/uploads/preview/high-quality-roblox-logo-png-with-white-symbol-design-11678493401b89selal9p.webp" }
   ];
 
   return (
