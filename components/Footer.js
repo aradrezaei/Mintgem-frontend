@@ -1,7 +1,7 @@
 'use client';
 
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-
+z
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-gray-300 to-white text-gray-800 dark:text-gray-300  dark:bg-gradient-to-r dark:from-gray-900 dark:to-black py-10 mt-20">

@@ -1,17 +1,16 @@
-'use client';
+'use client'; // اضافه کن اولین خط
 
-import dynamic from 'next/dynamic';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import HeroSlider from '../components/HeroSlider';
+import GamesSlider from '../components/GamesSlider';
+import AvailableGamesSection from '../components/AvailableGamesSection';
+import GamesList from '../components/GamesList';
 import WhyMintGem from '../components/WhyMintGem';
 import FeaturesSection from '../components/FeaturesSection';
 import AmazingOffers from '../components/AmazingOffers';
 import ArticlesSlider from '../components/ArticlesSlider';
 import SocialMediaSection from '../components/SocialMediaSection';
-
-// فقط این دوتا به صورت داینامیک با SSR=false
-const HeroSlider = dynamic(() => import('../components/HeroSlider'), { ssr: false });
-const GamesSlider = dynamic(() => import('../components/GamesSlider'), { ssr: false });
 
 export default function Home() {
   return (
@@ -19,12 +18,20 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <HeroSlider />
-        <GamesSlider />
-        <WhyMintGem />
-        <FeaturesSection />
-        <AmazingOffers />
-        <ArticlesSlider />
-        <SocialMediaSection />
+                  <GamesSlider />
+        
+          <AvailableGamesSection />
+          <GamesList />
+        
+          <WhyMintGem />
+        
+          <FeaturesSection />
+        
+          <AmazingOffers />
+        
+          <ArticlesSlider />
+        
+          <SocialMediaSection />
       </main>
       <Footer />
     </div>

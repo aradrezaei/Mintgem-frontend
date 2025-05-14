@@ -2,17 +2,11 @@
 
 import { Gift } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-
-// ONLY FOR VERSION 8
-SwiperCore.use([Autoplay, Pagination, Navigation]);
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-
-
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+z
 export default function AmazingOffers() {
   return (
     <section className="py-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">

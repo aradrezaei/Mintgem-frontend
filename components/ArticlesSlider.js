@@ -1,16 +1,9 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-
-// ONLY FOR VERSION 8
-SwiperCore.use([Autoplay, Pagination, Navigation]);
-
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
+z
 export default function ArticlesSlider() {
   const articles = [
     { title: "بهترین روش‌های خرید جم فری فایر", image: "/images/article1.jpg" },
