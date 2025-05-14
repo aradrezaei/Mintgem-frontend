@@ -1,6 +1,9 @@
 'use client';
 
-import SwiperCore, { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay,} from 'swiper';
+import 'swiper/css';
+
 
 SwiperCore.use([Autoplay]);
 
