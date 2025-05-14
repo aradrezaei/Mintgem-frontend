@@ -9,7 +9,7 @@ import AmazingOffers from '../components/AmazingOffers';
 import ArticlesSlider from '../components/ArticlesSlider';
 import SocialMediaSection from '../components/SocialMediaSection';
 
-// فقط اینا داینامیک باشن!
+// فقط این دوتا به صورت داینامیک با SSR=false
 const HeroSlider = dynamic(() => import('../components/HeroSlider'), { ssr: false });
 const GamesSlider = dynamic(() => import('../components/GamesSlider'), { ssr: false });
 
