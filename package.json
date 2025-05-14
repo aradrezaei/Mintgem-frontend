@@ -13,7 +13,7 @@
     "react-dom": "18.2.0",
     "lucide-react": "^0.276.0",
     "react-icons": "^4.10.1",
-    "swiper": "latest"
+    "swiper": "^9.4.1"
 
   },
   "devDependencies": {
