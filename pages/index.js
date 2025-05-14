@@ -7,9 +7,8 @@ import FeaturesSection from '../components/FeaturesSection';
 import AmazingOffers from '../components/AmazingOffers';
 import SocialMediaSection from '../components/SocialMediaSection';
 
+// ⚠️ Swiper کامپوننت‌ها فقط در کلاینت
 import dynamic from 'next/dynamic';
-
-// 👇 اینا Swiper دارن، پس باید به صورت داینامیک و فقط در کلاینت لود بشن
 const HeroSlider = dynamic(() => import('../components/HeroSlider'), { ssr: false });
 const GamesSlider = dynamic(() => import('../components/GamesSlider'), { ssr: false });
 const ArticlesSlider = dynamic(() => import('../components/ArticlesSlider'), { ssr: false });
