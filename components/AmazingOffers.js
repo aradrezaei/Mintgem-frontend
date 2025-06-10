@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-z
+
 export default function AmazingOffers() {
   return (
     <section className="py-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">

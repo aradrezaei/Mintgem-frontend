@@ -3,9 +3,9 @@
 export default function GamesList() {
   const games = [
     { name: "Free Fire", image: "https://www.cdnlogo.com/logos/f/51/freefire-1.svg" },
-    { name: "Call of Duty Mobile", image: "https://www.citypng.com/public/uploads/preview/hd-call-of-duty-mobile-codm-game-official-logo-png-7017516947877289uky0ombog.png" },
+    { name: "Call of Duty Mobile", image: "Futuristic Soldier in Call of Duty copy.png" },
     { name: "PUBG Mobile", image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/PUBG_Mobile_logo.svg" },
-    { name: "Mobile Legends", image: "https://upload.wikimedia.org/wikipedia/en/9/91/Mobile_Legends_Bang_Bang_logo.png" },
+    { name: "Mobile Legends", image: "Mobile Legends_ Hero in Action(1).png" },
     { name: "Fortnite", image: "https://1000logos.net/wp-content/uploads/2021/11/Fortnite-Logo-2017.png" },
     { name: "Clash of Clans", image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Clash_of_Clans_logo.png" }
   ];
