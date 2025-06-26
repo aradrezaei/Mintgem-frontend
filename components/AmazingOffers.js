@@ -1,11 +1,13 @@
 'use client';
 
-import { Gift } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+
 
 export default function AmazingOffers() {
   return (
