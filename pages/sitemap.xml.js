@@ -1,33 +1,22 @@
 export async function GET() {
-  const baseUrl = 'https://mintgem.ir'; 
-
-  const staticPages = [
-    '',
-    '/about',
-    '/contact-us',
-    "/login.js",
-    "/terms-of-service.js",
-    "/purchaseprocess.js",
-
-
-];
-
-  const body = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${staticPages
-      .map(
-        (path) => `
-      <url>
-        <loc>${baseUrl}${path}</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-      </url>`
-      )
-      .join('')}
+    <url>
+      <loc>https://mintgem.ir/</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
+    <url>
+      <loc>https://mintgem.ir/about</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
+    <url>
+      <loc>https://mintgem.ir/contact</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
+    <!-- Add more URLs as needed -->
   </urlset>`;
 
-  return new Response(body, {
-    status: 200,
+  return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
     },
