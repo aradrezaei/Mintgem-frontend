@@ -4,7 +4,7 @@ import Head from 'next/head'; // SEO management
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSlider from '../components/HeroSlider';
-import GamesSlider from '../components/GamesSlider';
+import GamesSlider from '../GamesSlider';
 import AvailableGamesSection from '../components/AvailableGamesSection';
 import GamesList from '../components/GamesList';
 import WhyMintGem from '../components/WhyMintGem';
