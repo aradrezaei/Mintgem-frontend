@@ -46,10 +46,15 @@ export default function About() {
             </p>
           </div>
           <div>
-            <img 
-              src="/mintgem-target.png" 
-              alt="هدف مینت جم" 
+            <Image 
+              src="/mintgem-target.webp" 
+              alt="هدف مینت جم"
+              width={400}             // عرض واقعی تصویر (اختیاری، برای بهینه‌سازی)
+              height={224}            // ارتفاع واقعی تصویر متناسب با عرض
               className="w-full max-w-md h-56 rounded-2xl shadow-xl object-cover mx-auto"
+              loading="lazy"         // لیزی لودینگ (به صورت پیش‌فرض lazy است، اما برای وضوح اضافه شده)
+              placeholder="blur"     // ایجاد اثر Blur قبل از لود کامل (اختیاری، اگر static import استفاده شود بهتر عمل می‌کند)
+              priority={false}       // برای تصاویر غیر Hero، false بماند
             />
           </div>
         </section>

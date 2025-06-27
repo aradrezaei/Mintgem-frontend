@@ -1,32 +1,34 @@
 'use client';
 
-// Swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Sample game data
 const games = [
-  { name: "Free Fire", image: "/freefire-b.jpg" },
-  { name: "Call of Duty Mobile", image: "/COD-b.png" },
-  { name: "Mobile Legends", image: "/mobilelegends-b.png" },
-  { name: "Fortnite", image: "/fortnite-b.jpg" },
-  { name: "Clash of Clans", image: "/clash-b.jpg" }
+  { name: "Free Fire", image: "/freefire-b.webp" },
+  { name: "Call of Duty Mobile", image: "/COD-b.webp" },
+  { name: "Mobile Legends", image: "/mobilelegends-b.webp" },
+  { name: "Fortnite", image: "/fortnite-b.webp" },
+  { name: "Clash of Clans", image: "/clash-b.webp" }
 ];
 
 export default function GamesList() {
   return (
-    <section className="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-extrabold text-center mb-12">محبوب‌ترین بازی‌ها</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-primary dark:text-white">
+          محبوب‌ترین بازی‌ها
+        </h2>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={24}
+          spaceBetween={20}
           loop={true}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
@@ -36,16 +38,20 @@ export default function GamesList() {
         >
           {games.map((game, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-[1.03]">
-                <div className="aspect-w-16 aspect-h-10 w-full bg-white dark:bg-gray-700">
-                  <img
+              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.04] duration-300">
+                <div className="relative w-full h-52 sm:h-60 md:h-64">
+                  <Image
                     src={game.image}
-                    alt={game.name}
-                    className="w-full h-full object-cover rounded-t-3xl"
+                    alt={`آیکون بازی ${game.name} - خرید سریع و ارزان`}
+                    fill
+                    className="object-cover"
+                    priority // Load immediately for first paint
                   />
                 </div>
                 <div className="p-4 text-center">
-                  <h3 className="text-lg font-semibold">{game.name}</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                    {game.name}
+                  </h3>
                 </div>
               </div>
             </SwiperSlide>
