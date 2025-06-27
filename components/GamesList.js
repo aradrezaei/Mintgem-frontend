@@ -24,7 +24,7 @@ export default function GamesList() {
         </h2>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={20}
           loop={true}
           autoplay={{ delay: 3500, disableOnInteraction: false }}

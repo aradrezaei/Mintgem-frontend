@@ -1,13 +1,13 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 
 export default function HeroSlider() {
   const slides = [
@@ -41,26 +41,22 @@ export default function HeroSlider() {
           className="w-full h-[300px] sm:h-[400px] md:h-[500px]"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="relative w-full h-full">
-              {/* Optimized Image with Next/Image */}
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover"
-                priority // to load immediately for first contentful paint
-              />
-              {/* Overlay and text */}
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center items-center text-center p-4">
-                <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold drop-shadow-md">
-                  {slide.title}
-                </h2>
-                <p className="mt-3 text-gray-100 text-sm sm:text-base md:text-lg drop-shadow-sm">
-                  {slide.subtitle}
-                </p>
-                <button className="mt-5 px-6 py-2 text-sm sm:text-base bg-primary text-white font-bold rounded-full hover:bg-secondary transition-all shadow-md">
-                  شروع خرید
-                </button>
+            <SwiperSlide key={index}>
+              <div
+                className="w-full h-full flex flex-col justify-center items-center text-center bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="bg-black/40 backdrop-blur-md px-6 py-4 rounded-2xl max-w-md mx-auto">
+                  <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold">{slide.title}</h2>
+                  <p className="mt-3 text-gray-100 text-sm sm:text-base md:text-lg">{slide.subtitle}</p>
+                  <button className="mt-5 px-6 py-2 text-sm sm:text-base bg-primary text-white font-bold rounded-full hover:bg-secondary transition-all">
+                    شروع خرید
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           ))}
