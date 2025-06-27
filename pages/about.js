@@ -26,7 +26,7 @@ export default function About() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="mt-18 sm:mt-18">
+        <section className="mt-16 sm:mt-16">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-white mb-4 tracking-tight">
               درباره مینت جم

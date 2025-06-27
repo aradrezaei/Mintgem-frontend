@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 // Sample game data
 const games = [
   { name: "Free Fire", image: "https://www.cdnlogo.com/logos/f/51/freefire-1.svg" },
-  { name: "Call of Duty Mobile", image: "/Futuristic Soldier in Call of Duty copy.png" },
+  { name: "Call of Duty Mobile", image: "/Futuristic Soldier in Call of Duty.png" },
   { name: "Mobile Legends", image: "/Mobile Legends_ Hero in Action(1).png" },
   { name: "Fortnite", image: "https://1000logos.net/wp-content/uploads/2021/11/Fortnite-Logo-2017.png" },
   { name: "Clash of Clans", image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Clash_of_Clans_logo.png" }
