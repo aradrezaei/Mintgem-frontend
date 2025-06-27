@@ -19,7 +19,7 @@ export default function GamesList() {
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-primary dark:text-white">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-800 dark:text-white">
           محبوب‌ترین بازی‌ها
         </h2>
 
@@ -38,7 +38,7 @@ export default function GamesList() {
         >
           {games.map((game, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.04] duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-2xl transition-transform transform hover:scale-[1.04] duration-300">
                 <div className="relative w-full h-52 sm:h-60 md:h-64">
                   <Image
                     src={game.image}
@@ -61,3 +61,16 @@ export default function GamesList() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

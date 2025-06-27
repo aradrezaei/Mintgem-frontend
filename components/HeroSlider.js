@@ -30,7 +30,7 @@ export default function HeroSlider() {
 
   return (
     <section className="mt-24 px-2 md:px-0">
-      <div className="w-full max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+      <div className="w-full max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
         <Swiper
           spaceBetween={10}
           centeredSlides={true}
