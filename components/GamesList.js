@@ -27,7 +27,6 @@ export default function GamesList() {
           spaceBetween={24}
           loop={true}
           autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },

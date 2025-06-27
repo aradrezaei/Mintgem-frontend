@@ -31,7 +31,7 @@ export default function ContactUs() {
       <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
         <Navbar />
 
-        <section className="py-16 text-center px-4">
+        <section className="py-16 mt-16 sm:mt-16 text-center px-4">
           <h1 className="text-5xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-4">تماس با مینت جم</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-10">
             پشتیبانی هفت روز هفته، پاسخ‌گویی سریع و دوستانه

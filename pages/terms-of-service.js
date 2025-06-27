@@ -9,7 +9,7 @@ export default function TermsPage() {
 
               <Navbar />
 
-    <section className="py-24 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <section className="py-24 mt-16 sm:mt-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <div className="max-w-5xl mx-auto px-6">
         <h1 className="text-4xl font-extrabold mb-10 text-center text-indigo-600 dark:text-indigo-400">
           قوانین و مقررات استفاده از خدمات مینت جم

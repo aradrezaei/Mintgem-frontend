@@ -26,7 +26,7 @@ export default function About() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="mt-12 sm:mt-12">
+        <section className="mt-18 sm:mt-18">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-white mb-4 tracking-tight">
               درباره مینت جم
@@ -47,7 +47,7 @@ export default function About() {
           </div>
           <div>
             <img 
-              src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-8f60-61f7-9600-98793c9d6b20/raw?se=2025-05-05T09%3A28%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=0b6db320-a8e0-55bd-a92f-afa026701e22&skoid=cbbaa726-4a2e-4147-932c-56e6e553f073&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-04T18%3A35%3A06Z&ske=2025-05-05T18%3A35%3A06Z&sks=b&skv=2024-08-04&sig=k6t0xW/Rk%2BPZJTmcbl8fnPbjZz/Df1kF98pZ/hCRMng%3D" 
+              src="/mintgem-target.png" 
               alt="هدف مینت جم" 
               className="rounded-3xl shadow-2xl object-cover"
             />
