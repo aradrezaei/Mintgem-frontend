@@ -31,8 +31,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="MintGem Logo" className="w-12 h-12 rounded-full" />
-          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">مینت جم</span>
+          <img src="/logo.png" alt="MintGem Logo" className="w-14 h-14 rounded-full" />
+          <span className="text-2xl font-bold text-gray-800 dark:text-gray-200">مینت جم</span>
         </Link>
 
         {/* Desktop Menu */}

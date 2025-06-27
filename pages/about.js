@@ -49,7 +49,7 @@ export default function About() {
             <img 
               src="/mintgem-target.png" 
               alt="هدف مینت جم" 
-              className="rounded-3xl shadow-2xl object-cover"
+              className="w-full max-w-md h-48 rounded-2xl shadow-xl object-cover mx-auto"
             />
           </div>
         </section>
