@@ -13,7 +13,7 @@ const games = [
   { name: "Call of Duty Mobile", image: "/COD-b.png" },
   { name: "Mobile Legends", image: "/mobilelegends-b.png" },
   { name: "Fortnite", image: "/fortnite-b.jpg" },
-  { name: "Clash of Clans", image: "https://upload.wikimedia.org/wikipedia/en/5/5f/Clash_of_Clans_logo.png" }
+  { name: "Clash of Clans", image: "/clash-b.jpg" }
 ];
 
 export default function GamesList() {
