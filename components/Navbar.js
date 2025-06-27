@@ -1,116 +1,120 @@
 'use client';
 
+// Modern, elegant Next.js navbar with animated mobile drawer, color transitions, and clean dark/light toggle.
 import { useState, useEffect } from 'react';
-import { ShoppingCart, Sun, Moon, Menu, User, Search } from 'lucide-react';
+import { ShoppingCart, Sun, Moon, Menu, User, Search, X } from 'lucide-react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Detect system theme preference
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(prefersDark);
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all ${isScrolled ? 'bg-white dark:bg-darkbg shadow-md backdrop-blur-md' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        {/* Logo and Name */}
-        <div className="flex items-center ">
-          <img src="logo.png" alt="Logo" className="w-14 h-14" />
-          <span className="text-2xl font-extrabold text-gray-800 dark:text-gray-300">مینت جم</span>
-        </div>
+    <header className={`fixed w-full top-0 z-50 transition-all ${isScrolled ? 'bg-white/80 dark:bg-black/60 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="MintGem Logo" className="w-12 h-12 rounded-full" />
+          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">مینت جم</span>
+        </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خانه</span></Link>
-          <Link href="/services"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خدمات</span></Link>
-          <Link href="/blog"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">وبلاگ</span></Link>
-          <Link href="/about"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">درباره ما</span></Link>
-          <Link href="/contact-us"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">ارتباط با ما</span></Link>
-          <Link href="/purchaseprocess"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">فرایند خرید</span></Link>
-        </nav>
-
-        {/* Actions */}
-        <div className="flex items-center gap-4">
-          {/* Search Box */}
-          <div className="hidden lg:flex items-center bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
-            <input type="text" placeholder="جستجو..." className="bg-transparent outline-none text-sm text-gray-700 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-400" />
-            <Search size={18} className="text-gray-500 dark:text-gray-400 ml-2" />
-          </div>
-
-          {/* Light/Dark Mode Toggle */}
+        <nav className="hidden lg:flex items-center gap-6">
+          {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
+            <Link
+              key={idx}
+              href={
+                idx === 0 ? '/' :
+                idx === 1 ? '/services' :
+                idx === 2 ? '/blog' :
+                idx === 3 ? '/about' :
+                idx === 4 ? '/contact-us' : '/purchaseprocess'
+              }
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium transition"
+            >
+              {item}
+            </Link>
+          ))}
           <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-primary text-white hover:bg-secondary transition">
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-
-          {/* Divider */}
-          <div className="hidden lg:block w-px h-6 bg-gray-400/40 mx-2"></div>
-
-          {/* Login/Register Button */}
-          <Link href="/login">
-            <button className="hidden lg:flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-full font-semibold hover:bg-pink-500 transition">
-              <User size={18} /> ورود / ثبت‌نام
-            </button>
+          <Link href="/login" className="flex items-center gap-1 px-4 py-2 bg-accent text-white rounded-full font-medium hover:bg-pink-500 transition">
+            <User size={18} /> <span>ورود</span>
           </Link>
-
-          {/* Shopping Cart */}
-          <button className="relative p-2 bg-primary text-white rounded-full hover:bg-secondary transition">
+          <button className="relative p-2 rounded-full bg-primary text-white hover:bg-secondary transition">
             <ShoppingCart size={20} />
             <span className="absolute -top-1 -right-1 bg-white text-primary text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
           </button>
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 bg-primary text-white rounded-full hover:bg-secondary transition">
-            <Menu size={24} />
-          </button>
-        </div>
+        {/* Mobile Menu Button */}
+        <button onClick={() => setMenuOpen(true)} className="lg:hidden p-2 bg-primary text-white rounded-full hover:bg-secondary transition">
+          <Menu size={24} />
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="lg:hidden bg-white dark:bg-darkbg shadow-md backdrop-blur-md flex flex-col items-center py-6 gap-6 animate-slideDown">
-          <div className="flex items-center gap-2">
-            <img src="logo.png" alt="لوگو مینت جم" className="w-14 h-14" />
-            <span className="text-xl font-bold text-primary">مینت جم</span>
-          </div>
-          <div className="flex flex-col gap-4 text-center">
-            <Link href="/"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خانه</span></Link>
-            <Link href="/services"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">خدمات</span></Link>
-            <Link href="/blog"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">وبلاگ</span></Link>
-            <Link href="/about"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">درباره ما</span></Link>
-            <Link href="/contact-us"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">ارتباط با ما</span></Link>
-            <Link href="/purchaseprocess"><span className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition font-semibold">فرایند خرید</span></Link>
-          </div>
-          <div className="flex items-center gap-4 mt-4">
-            <Search size={24} className="text-gray-700 dark:text-gray-300" />
-            <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-primary text-white hover:bg-secondary transition">
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            <User size={24} className="text-gray-700 dark:text-gray-300" />
-            <ShoppingCart size={24} className="text-gray-700 dark:text-gray-300" />
-          </div>
-        </div>
-      )}
+      {/* Mobile Drawer Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-gray-900 shadow-lg z-50 p-6 flex flex-col gap-6"
+          >
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-bold text-primary">مینت جم</span>
+              <button onClick={() => setMenuOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-red-500">
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex flex-col gap-4">
+              {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={
+                    idx === 0 ? '/' :
+                    idx === 1 ? '/services' :
+                    idx === 2 ? '/blog' :
+                    idx === 3 ? '/about' :
+                    idx === 4 ? '/contact-us' : '/purchaseprocess'
+                  }
+                  onClick={() => setMenuOpen(false)}
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium transition"
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+            <div className="flex gap-4 mt-auto">
+              <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-primary text-white hover:bg-secondary transition">
+                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              <Link href="/login" onClick={() => setMenuOpen(false)} className="flex items-center gap-1 px-4 py-2 bg-accent text-white rounded-full font-medium hover:bg-pink-500 transition">
+                <User size={18} /> <span>ورود</span>
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
