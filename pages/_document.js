@@ -4,7 +4,11 @@ export default function Document() {
   return (
     <Html lang="fa" dir="rtl">
       <Head>
-
+        <link
+          href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css"
+          rel="stylesheet"
+          type="text/css"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
