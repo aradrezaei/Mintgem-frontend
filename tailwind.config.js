@@ -1,21 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class', // اضافه کن
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Shabnam', 'ui-sans-serif', 'system-ui'],
-            },
+      },
       colors: {
-        primary: '#6D28D9',   // بنفش سلطنتی
-        secondary: '#9333EA', // بنفش پررنگ‌تر
-        accent: '#F472B6',    // صورتی شیک
-        darkbg: 'rgba(0,0,0,0.7)', // بک گراند دارک مود
-      }
+        primary: '#6D28D9',      // Royal Purple
+        secondary: '#9333EA',    // Deeper Purple
+        accent: '#F472B6',       // Elegant Pink
+        darkbg: 'rgba(0,0,0,0.7)', // Dark Mode Background
+      },
     },
   },
   plugins: [],
-}
+};
