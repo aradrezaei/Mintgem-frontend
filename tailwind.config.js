@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        shabnam: ['Shabnam', 'sans-serif'],
-      },
+        sans: ['Shabnam', 'ui-sans-serif', 'system-ui'],
+            },
       colors: {
         primary: '#6D28D9',   // بنفش سلطنتی
         secondary: '#9333EA', // بنفش پررنگ‌تر

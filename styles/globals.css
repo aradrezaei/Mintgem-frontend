@@ -1,8 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam/Shabnam.woff2') format('woff2'),
+       url('/fonts/Shabnam/Shabnam.woff') format('woff'),
+       url('/fonts/Shabnam/Shabnam.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
 
-body {
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam/Shabnam-Bold.woff2') format('woff2'),
+       url('/fonts/Shabnam/Shabnam-Bold.woff') format('woff'),
+       url('/fonts/Shabnam/Shabnam-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam/Shabnam-Medium.woff2') format('woff2'),
+       url('/fonts/Shabnam/Shabnam-Medium.woff') format('woff'),
+       url('/fonts/Shabnam/Shabnam-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam/Shabnam-Light.woff2') format('woff2'),
+       url('/fonts/Shabnam/Shabnam-Light.woff') format('woff'),
+       url('/fonts/Shabnam/Shabnam-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam/Shabnam-Thin.woff2') format('woff2'),
+       url('/fonts/Shabnam/Shabnam-Thin.woff') format('woff'),
+       url('/fonts/Shabnam/Shabnam-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+}
+
+html, body {
   font-family: 'Shabnam', sans-serif;
-  direction: rtl;
 }
