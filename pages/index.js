@@ -10,6 +10,7 @@ import FeaturesSection from '../components/FeaturesSection';
 import AmazingOffers from '../components/AmazingOffers';
 import ArticlesSlider from '../components/ArticlesSlider';
 import SocialMediaSection from '../components/SocialMediaSection';
+import UpdateAlert from '../components/UpdateAlert';
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       </Head>
 
       {/* Page Structure */}
+      <UpdateAlert />
       <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Navbar />
         <main className="flex-grow">
