@@ -4,30 +4,30 @@ import { useState, useEffect } from 'react';
 import { Bell, X } from 'lucide-react';
 
 export default function UpdateAlert() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
-  // Animation on mount
   useEffect(() => {
-    setShow(true);
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 1000); // نمایش با تاخیر ۱ ثانیه
+    return () => clearTimeout(timer);
   }, []);
 
   if (!show) return null;
 
   return (
-    <div className="fixed top-3 left-1/2 -translate-x-1/2 z-50 max-w-md w-[95%] px-4">
-      <div className="backdrop-blur-md bg-yellow-200/70 dark:bg-yellow-300/10 border border-yellow-300 dark:border-yellow-400 rounded-xl shadow-md flex items-center justify-between gap-3 p-3 animate-fadeIn slide-down">
-        <div className="flex items-center gap-2">
-          <Bell size={20} className="text-yellow-800 dark:text-yellow-300" />
-          <p className="text-sm text-yellow-900 dark:text-yellow-100">
-            سایت در حال بروزرسانی است. امکان خرید موقتاً غیرفعال می‌باشد.
-          </p>
+    <div className="fixed top-5 right-5 z-[9999] animate-slideIn">
+      <div className="flex items-center gap-4 bg-yellow-400/80 dark:bg-yellow-500/30 backdrop-blur-xl text-gray-800 dark:text-gray-100 px-5 py-3 rounded-2xl shadow-xl border border-yellow-500/30 max-w-xs w-full">
+        <Bell className="w-6 h-6 flex-shrink-0" />
+        <div className="flex-1 text-sm">
+          سایت در حال بروزرسانی است، امکان خرید فعلا وجود ندارد.
         </div>
         <button
-          aria-label="بستن اعلان"
           onClick={() => setShow(false)}
-          className="text-yellow-800 dark:text-yellow-200 hover:text-yellow-900 transition"
+          className="text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white transition"
+          aria-label="بستن اعلان"
         >
-          <X size={18} />
+          <X className="w-5 h-5" />
         </button>
       </div>
     </div>
