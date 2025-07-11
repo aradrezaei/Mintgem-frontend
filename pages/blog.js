@@ -2,8 +2,8 @@
 
 import Head from "next/head";
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const posts = [
   { id: 1, title: "مدیریت استرس در زندگی روزمره", summary: "راهکارهایی کاربردی برای کاهش استرس.", date: "۱۴۰۴/۰۱/۰۵" },
