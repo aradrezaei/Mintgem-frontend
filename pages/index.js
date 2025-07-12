@@ -2,8 +2,7 @@
 
 // Essential imports
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import HeroSlider from '../components/HeroSlider';
 import GamesList from '../components/GamesList';
 import WhyMintGem from '../components/WhyMintGem';
@@ -34,8 +33,6 @@ export default function Home() {
         {/* Update Alert */}
         <UpdateAlert />
 
-        {/* Navbar */}
-        <Navbar />
 
         {/* Main Content */}
         <main className="flex-grow">
@@ -48,8 +45,7 @@ export default function Home() {
           <SocialMediaSection />
         </main>
 
-        {/* Footer */}
-        <Footer />
+
       </div>
 
       {/* JSON-LD Schema for Rich Results */}

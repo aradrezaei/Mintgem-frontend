@@ -2,8 +2,7 @@
 
 import Head from "next/head";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 // مقالات مرتبط با گیم و خرید جم
 const posts = [
@@ -28,7 +27,6 @@ export default function Blog() {
         <meta name="description" content="آخرین مقالات آموزشی و خبری مرتبط با بازی‌ها، خرید جم و دنیای گیمینگ در وبلاگ مینت جم." />
       </Head>
 
-      <Navbar />
 
       <main className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen py-24 px-4 md:px-12">
         <section className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
@@ -83,7 +81,6 @@ export default function Blog() {
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }

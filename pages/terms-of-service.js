@@ -1,13 +1,11 @@
 'use client';
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 export default function TermsPage() {
   return (
     <main>
 
-              <Navbar />
 
     <section className="py-24 mt-16 sm:mt-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <div className="max-w-5xl mx-auto px-6">
@@ -61,7 +59,6 @@ export default function TermsPage() {
       </div>
     </section>
 
-          <Footer />
 
     </main>
 

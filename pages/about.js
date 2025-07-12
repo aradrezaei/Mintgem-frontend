@@ -2,8 +2,6 @@
 
 import Head from 'next/head'; // برای SEO
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { FaRocket, FaShieldAlt, FaTags, FaHeadset } from 'react-icons/fa';
 
 export default function About() {
@@ -89,7 +87,6 @@ export default function About() {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );

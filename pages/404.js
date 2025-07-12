@@ -3,15 +3,12 @@
 // 404 Page – Custom not found page for MintGem
 
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import { AlertTriangle } from 'lucide-react';
 
 export default function NotFoundPage() {
   return (
     <main>
-      {/* Top Navbar */}
-      <Navbar />
 
       {/* Main 404 Content */}
       <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-center px-6 py-12">
@@ -45,8 +42,7 @@ export default function NotFoundPage() {
         </div>
       </div>
 
-      {/* Footer Section */}
-      <Footer />
+
     </main>
   );
 }

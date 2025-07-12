@@ -1,8 +1,7 @@
 'use client';
 
 import Head from 'next/head'; 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 
@@ -29,7 +28,6 @@ export default function ContactUs() {
 
       {/* Page content */}
       <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-        <Navbar />
 
         <section className="py-16 mt-16 sm:mt-16 text-center px-4">
           <h1 className="text-5xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-4">تماس با مینت جم</h1>
@@ -82,7 +80,6 @@ export default function ContactUs() {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );
