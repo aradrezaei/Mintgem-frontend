@@ -22,7 +22,6 @@ export default function About() {
       </Head>
 
       <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Navbar />
 
         {/* Hero Section */}
         <section className="mt-16 sm:mt-16">
