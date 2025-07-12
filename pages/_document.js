@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="fa" dir="rtl">
+    <Html lang="fa" dir="rtl" className={shabnam.variable}>
       <Head>
 
         <link rel="icon" href="/favicon.ico" />

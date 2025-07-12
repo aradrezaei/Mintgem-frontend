@@ -38,7 +38,7 @@ export default function GamesList() {
         >
           {games.map((game, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-2xl transition-transform transform hover:scale-[1.04] duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden   transition-transform transform hover:scale-[1.04] duration-300">
                 <div className="relative w-full h-52 sm:h-60 md:h-64">
                   <Image
                     src={game.image}

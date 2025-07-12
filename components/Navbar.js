@@ -2,7 +2,7 @@
 
 // Modern, elegant Next.js navbar with animated mobile drawer, color transitions, and clean dark/light toggle.
 import { useState, useEffect } from 'react';
-import { ShoppingCart, Sun, Moon, Menu, User, Search, X } from 'lucide-react';
+import { ShoppingCart, Sun, Moon, Menu, User, X } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -37,15 +37,14 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center gap-6">
-          {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
+          {['خانه', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
             <Link
               key={idx}
               href={
                 idx === 0 ? '/' :
-                idx === 1 ? '/services' :
-                idx === 2 ? '/blog' :
-                idx === 3 ? '/about' :
-                idx === 4 ? '/contact-us' : '/purchaseprocess'
+                idx === 1 ? '/blog' :
+                idx === 2 ? '/about' :
+                idx === 3 ? '/contact-us' : '/purchaseprocess'
               }
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium transition"
             >
@@ -87,15 +86,14 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex flex-col gap-4">
-              {['خانه', 'خدمات', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
+              {['خانه', 'وبلاگ', 'درباره ما', 'ارتباط با ما', 'فرایند خرید'].map((item, idx) => (
                 <Link
                   key={idx}
                   href={
                     idx === 0 ? '/' :
-                    idx === 1 ? '/services' :
-                    idx === 2 ? '/blog' :
-                    idx === 3 ? '/about' :
-                    idx === 4 ? '/contact-us' : '/purchaseprocess'
+                    idx === 1 ? '/blog' :
+                    idx === 2 ? '/about' :
+                    idx === 3 ? '/contact-us' : '/purchaseprocess'
                   }
                   onClick={() => setMenuOpen(false)}
                   className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium transition"
